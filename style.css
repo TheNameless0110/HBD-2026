@@ -1,0 +1,184 @@
+/* Premium Cinematic & Vibrant Fonts Setup */
+.font-playfair {
+    font-family: 'Playfair Display', serif;
+}
+.font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* =========================================
+   VIBRANT AFTER-EFFECTS BACKGROUND
+   ========================================= */
+.vibrant-bg {
+    background: linear-gradient(-45deg, #ff9a9e, #fecfef, #a1c4fd, #c2e9fb, #ffb199);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Glassmorphism that pops on vibrant backgrounds */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+}
+
+/* =========================================
+   FLOATING GIANT FLOWERS (LILIES)
+   ========================================= */
+.floating-flower {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.15));
+    animation: floatFlower 10s ease-in-out infinite alternate;
+}
+
+.flower-1 { top: -5%; left: -5%; width: 300px; animation-duration: 12s; }
+.flower-2 { bottom: 10%; right: -10%; width: 400px; animation-duration: 15s; animation-delay: 2s; }
+.flower-3 { top: 40%; left: 80%; width: 250px; animation-duration: 14s; animation-delay: 1s; opacity: 0.6; }
+.flower-4 { bottom: -10%; left: 10%; width: 350px; animation-duration: 18s; animation-delay: 3s; }
+
+@keyframes floatFlower {
+    0% { transform: translateY(0) rotate(0deg) scale(1); }
+    100% { transform: translateY(-30px) rotate(15deg) scale(1.05); }
+}
+
+/* =========================================
+   3D TRANSFORMS (CARDS & ENVELOPE)
+   ========================================= */
+.transform-style-3d {
+    transform-style: preserve-3d;
+    perspective: 1500px;
+}
+
+.backface-hidden {
+    backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+    transform: rotateY(180deg);
+}
+.rotate-y-0 {
+    transform: rotateY(0deg);
+}
+
+.card-face {
+    backface-visibility: hidden;
+    transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.card-front {
+    transform: rotateY(0deg);
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+.premium-card.open .card-front {
+    transform: rotateY(-180deg);
+}
+.premium-card.open .card-back {
+    transform: rotateY(0deg);
+}
+.premium-card.open {
+    transform: scale(1.05) translateY(-20px) !important;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-150%) rotate(-45deg); }
+    100% { transform: translateX(250%) rotate(-45deg); }
+}
+.animate-shimmer {
+    animation: shimmer 2s infinite linear;
+}
+
+/* =========================================
+   GLOWING TEXT EFFECTS
+   ========================================= */
+.text-glow {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.4);
+}
+.text-glow-blue {
+    text-shadow: 0 0 15px rgba(59, 130, 246, 0.8), 0 0 30px rgba(59, 130, 246, 0.6);
+}
+
+/* =========================================
+   CANDLE & PARTICLES
+   ========================================= */
+@keyframes flicker {
+    0%   { transform: rotate(-1deg) scale(0.9); opacity: 0.9; }
+    20%  { transform: rotate(1deg) scale(1.1); opacity: 1; }
+    40%  { transform: rotate(-1deg) scale(0.95); opacity: 0.8; }
+    60%  { transform: rotate(2deg) scale(1.05); opacity: 1; }
+    80%  { transform: rotate(-2deg) scale(0.9); opacity: 0.9; }
+    100% { transform: rotate(1deg) scale(1); opacity: 1; }
+}
+
+.animate-flicker {
+    animation: flicker 0.1s infinite alternate;
+    transform-origin: bottom center;
+}
+
+.premium-candle {
+    transition: all 0.5s ease-out;
+}
+
+.premium-candle.blown-out .flame,
+.premium-candle.blown-out .flame-outer,
+.premium-candle.blown-out .flame-inner {
+    opacity: 0 !important;
+    transform: scaleY(0) translateY(10px) !important;
+    transition: all 0.3s ease-in;
+}
+
+.premium-candle.blown-out .wick {
+    background: #333 !important;
+    box-shadow: 0 -1px 3px rgba(255,50,0,0.8);
+    transition: all 0.3s ease-in;
+}
+
+/* Smoke effect */
+.premium-candle.blown-out::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    background: rgba(200, 200, 200, 0.4);
+    border-radius: 50%;
+    filter: blur(3px);
+    animation: smoke 2s ease-out forwards;
+}
+
+@keyframes smoke {
+    0% { opacity: 1; transform: translate(-50%, 0) scale(1); }
+    100% { opacity: 0; transform: translate(-50%, -40px) scale(4); }
+}
+
+.cinematic-particle {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(1px);
+    pointer-events: none;
+    z-index: 1000;
+}
+
+/* Hide scrollbar */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
