@@ -182,3 +182,11 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
+
+@media (max-width: 768px) {
+    .flower-1 { width: 120px; top: 0%; left: -5%; }
+    .flower-2 { width: 150px; bottom: 5%; right: -5%; }
+    .flower-3 { width: 100px; top: 35%; left: 75%; }
+    .flower-4 { width: 140px; bottom: 10%; left: -5%; }
+}
+
