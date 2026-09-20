@@ -53,34 +53,34 @@
     <svg class="floating-flower flower-4" viewBox="0 0 100 100"><use href="#lily-flower" /></svg>
 
     <!-- STEP 1: The Vibrant Teaser (Envelope/Card) -->
-    <div id="envelope-screen" class="fixed inset-0 z-50 flex flex-col items-center justify-center vibrant-bg transition-all duration-[1500ms] ease-in-out">
+    <div id="envelope-screen" class="fixed inset-0 z-50 flex flex-col items-center justify-center vibrant-bg transition-all duration-[1500ms] ease-in-out px-4">
         
-        <div class="text-center z-10 mb-12" data-aos="zoom-in" data-aos-duration="1500">
-            <h1 class="text-sm md:text-2xl tracking-[0.4em] uppercase text-white font-bold mb-4 text-glow">A Vibrant Surprise</h1>
+        <div class="text-center z-10 mb-8 md:mb-12" data-aos="zoom-in" data-aos-duration="1500">
+            <h1 class="text-sm md:text-2xl tracking-[0.4em] uppercase text-white font-bold mb-2 md:mb-4 text-glow">A Vibrant Surprise</h1>
             <p class="text-5xl md:text-8xl font-playfair italic text-white text-glow-blue font-bold">For Rutu</p>
         </div>
         
         <div class="premium-card-wrapper relative cursor-pointer z-10 group" id="envelope" onclick="openEnvelope()">
-            <div class="premium-card w-72 h-96 md:w-80 md:h-[26rem] rounded-3xl relative transition-transform duration-1000 transform-style-3d group-hover:-translate-y-4 group-hover:scale-105">
+            <div class="premium-card w-64 h-80 md:w-80 md:h-[26rem] rounded-3xl relative transition-transform duration-1000 transform-style-3d group-hover:-translate-y-4 group-hover:scale-105">
                 
                 <div class="card-face card-front absolute inset-0 rounded-3xl glass-panel flex flex-col items-center justify-center overflow-hidden">
-                    <svg class="absolute top-0 right-0 w-32 h-32 opacity-50 translate-x-10 -translate-y-10" viewBox="0 0 100 100"><use href="#lily-flower" /></svg>
-                    <svg class="absolute bottom-0 left-0 w-32 h-32 opacity-50 -translate-x-10 translate-y-10" viewBox="0 0 100 100"><use href="#lily-flower" /></svg>
+                    <svg class="absolute top-0 right-0 w-24 h-24 md:w-32 md:h-32 opacity-50 translate-x-8 md:translate-x-10 -translate-y-8 md:-translate-y-10" viewBox="0 0 100 100"><use href="#lily-flower" /></svg>
+                    <svg class="absolute bottom-0 left-0 w-24 h-24 md:w-32 md:h-32 opacity-50 -translate-x-8 md:-translate-x-10 translate-y-8 md:translate-y-10" viewBox="0 0 100 100"><use href="#lily-flower" /></svg>
                     
-                    <div class="text-center p-6 relative z-10">
-                        <div class="w-20 h-20 mx-auto mb-6 rounded-full glass-panel flex items-center justify-center shadow-[0_0_30px_rgba(255,255,255,0.8)]">
-                            <svg class="w-8 h-8 text-pink-500 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 19v-8.93a2 2 0 01.89-1.664l7-4.666a2 2 0 012.22 0l7 4.666A2 2 0 0121 10.07V19M3 19a2 2 0 002 2h14a2 2 0 002-2M3 19l6.75-4.5M21 19l-6.75-4.5M3 10l6.75 4.5M21 10l-6.75 4.5m0 0l-1.14.76a2 2 0 01-2.22 0l-1.14-.76"></path></svg>
+                    <div class="text-center p-4 md:p-6 relative z-10">
+                        <div class="w-16 h-16 md:w-20 md:h-20 mx-auto mb-4 md:mb-6 rounded-full glass-panel flex items-center justify-center shadow-[0_0_30px_rgba(255,255,255,0.8)]">
+                            <svg class="w-6 h-6 md:w-8 md:h-8 text-pink-500 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 19v-8.93a2 2 0 01.89-1.664l7-4.666a2 2 0 012.22 0l7 4.666A2 2 0 0121 10.07V19M3 19a2 2 0 002 2h14a2 2 0 002-2M3 19l6.75-4.5M21 19l-6.75-4.5M3 10l6.75 4.5M21 10l-6.75 4.5m0 0l-1.14.76a2 2 0 01-2.22 0l-1.14-.76"></path></svg>
                         </div>
-                        <p class="font-playfair font-bold text-2xl text-blue-900">Tap to Reveal</p>
+                        <p class="font-playfair font-bold text-xl md:text-2xl text-blue-900">Tap to Reveal</p>
                     </div>
                     <div class="absolute top-0 left-0 w-[200%] h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -rotate-45 translate-x-[-150%] group-hover:animate-shimmer"></div>
                 </div>
 
-                <div class="card-face card-back absolute inset-0 rounded-3xl glass-panel flex flex-col items-center justify-center p-8">
+                <div class="card-face card-back absolute inset-0 rounded-3xl glass-panel flex flex-col items-center justify-center p-6 md:p-8">
                     <div class="text-center w-full">
-                        <p class="font-playfair italic font-bold text-3xl md:text-4xl text-blue-900 mb-6 drop-shadow-md">Dearest Rutu,</p>
-                        <p class="text-xs md:text-sm tracking-widest uppercase text-gray-800 mb-6 md:mb-10 font-bold leading-loose">A story written in the stars, waiting to be unfolded.</p>
-                        <button class="w-full bg-gradient-to-r from-pink-500 to-blue-500 hover:scale-105 text-white font-bold tracking-widest text-sm uppercase py-4 rounded-xl transition-transform duration-300 shadow-[0_0_20px_rgba(236,72,153,0.5)]" onclick="enterMainSite(event)">
+                        <p class="font-playfair italic font-bold text-2xl md:text-4xl text-blue-900 mb-4 md:mb-6 drop-shadow-md">Dearest Rutu,</p>
+                        <p class="text-[10px] md:text-sm tracking-widest uppercase text-gray-800 mb-6 md:mb-10 font-bold leading-relaxed md:leading-loose">A story written in the stars, waiting to be unfolded.</p>
+                        <button class="w-full bg-gradient-to-r from-pink-500 to-blue-500 hover:scale-105 text-white font-bold tracking-widest text-xs md:text-sm uppercase py-3 md:py-4 rounded-xl transition-transform duration-300 shadow-[0_0_20px_rgba(236,72,153,0.5)]" onclick="enterMainSite(event)">
                             Enter Experience
                         </button>
                     </div>
