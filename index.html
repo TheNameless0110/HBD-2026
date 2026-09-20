@@ -2,7 +2,7 @@
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>For Rutu 🌸</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -35,14 +35,14 @@
 <body class="text-gray-800 font-montserrat vibrant-bg" id="body">
 
     <!-- Audio for background music -->
-    <audio id="bgMusic" loop>
+    <audio id="bgMusic" loop preload="auto">
         <source src="song.mp3" type="audio/mpeg"> 
     </audio>
 
     <!-- Floating Music Controller -->
-    <div id="music-controller" class="fixed bottom-6 right-6 z-50 hidden opacity-0 transition-opacity duration-1000">
-        <button onclick="toggleMusic()" class="w-14 h-14 rounded-full glass-panel flex items-center justify-center hover:scale-110 transition-transform shadow-[0_0_20px_rgba(255,255,255,0.5)]">
-            <svg id="music-icon" class="w-6 h-6 text-pink-500 animate-pulse" fill="currentColor" viewBox="0 0 20 20"><path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.536l8-1.6V12.114A4.369 4.369 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z"></path></svg>
+    <div id="music-controller" class="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 hidden opacity-0 transition-opacity duration-1000">
+        <button onclick="toggleMusic()" class="w-12 h-12 md:w-14 md:h-14 rounded-full glass-panel flex items-center justify-center hover:scale-110 transition-transform shadow-[0_0_20px_rgba(255,255,255,0.5)]">
+            <svg id="music-icon" class="w-5 h-5 md:w-6 md:h-6 text-pink-500 animate-pulse" fill="currentColor" viewBox="0 0 20 20"><path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.536l8-1.6V12.114A4.369 4.369 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z"></path></svg>
         </button>
     </div>
 
@@ -55,31 +55,31 @@
     <!-- STEP 1: The Vibrant Teaser (Envelope/Card) -->
     <div id="envelope-screen" class="fixed inset-0 z-50 flex flex-col items-center justify-center vibrant-bg transition-all duration-[1500ms] ease-in-out px-4">
         
-        <div class="text-center z-10 mb-8 md:mb-12" data-aos="zoom-in" data-aos-duration="1500">
-            <h1 class="text-sm md:text-2xl tracking-[0.4em] uppercase text-white font-bold mb-2 md:mb-4 text-glow">A Vibrant Surprise</h1>
-            <p class="text-5xl md:text-8xl font-playfair italic text-white text-glow-blue font-bold">For Rutu</p>
+        <div class="text-center z-10 mb-6 md:mb-12" data-aos="zoom-in" data-aos-duration="1500">
+            <h1 class="text-xs md:text-2xl tracking-[0.3em] md:tracking-[0.4em] uppercase text-white font-bold mb-2 md:mb-4 text-glow">A Vibrant Surprise</h1>
+            <p class="text-4xl md:text-8xl font-playfair italic text-white text-glow-blue font-bold">For Rutu</p>
         </div>
         
         <div class="premium-card-wrapper relative cursor-pointer z-10 group" id="envelope" onclick="openEnvelope()">
-            <div class="premium-card w-64 h-80 md:w-80 md:h-[26rem] rounded-3xl relative transition-transform duration-1000 transform-style-3d group-hover:-translate-y-4 group-hover:scale-105">
+            <div class="premium-card w-60 h-[19rem] md:w-80 md:h-[26rem] rounded-3xl relative transition-transform duration-1000 transform-style-3d group-hover:-translate-y-4 group-hover:scale-105">
                 
                 <div class="card-face card-front absolute inset-0 rounded-3xl glass-panel flex flex-col items-center justify-center overflow-hidden">
-                    <svg class="absolute top-0 right-0 w-24 h-24 md:w-32 md:h-32 opacity-50 translate-x-8 md:translate-x-10 -translate-y-8 md:-translate-y-10" viewBox="0 0 100 100"><use href="#lily-flower" /></svg>
-                    <svg class="absolute bottom-0 left-0 w-24 h-24 md:w-32 md:h-32 opacity-50 -translate-x-8 md:-translate-x-10 translate-y-8 md:translate-y-10" viewBox="0 0 100 100"><use href="#lily-flower" /></svg>
+                    <svg class="absolute top-0 right-0 w-20 h-20 md:w-32 md:h-32 opacity-50 translate-x-6 md:translate-x-10 -translate-y-6 md:-translate-y-10" viewBox="0 0 100 100"><use href="#lily-flower" /></svg>
+                    <svg class="absolute bottom-0 left-0 w-20 h-20 md:w-32 md:h-32 opacity-50 -translate-x-6 md:-translate-x-10 translate-y-6 md:translate-y-10" viewBox="0 0 100 100"><use href="#lily-flower" /></svg>
                     
                     <div class="text-center p-4 md:p-6 relative z-10">
-                        <div class="w-16 h-16 md:w-20 md:h-20 mx-auto mb-4 md:mb-6 rounded-full glass-panel flex items-center justify-center shadow-[0_0_30px_rgba(255,255,255,0.8)]">
-                            <svg class="w-6 h-6 md:w-8 md:h-8 text-pink-500 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 19v-8.93a2 2 0 01.89-1.664l7-4.666a2 2 0 012.22 0l7 4.666A2 2 0 0121 10.07V19M3 19a2 2 0 002 2h14a2 2 0 002-2M3 19l6.75-4.5M21 19l-6.75-4.5M3 10l6.75 4.5M21 10l-6.75 4.5m0 0l-1.14.76a2 2 0 01-2.22 0l-1.14-.76"></path></svg>
+                        <div class="w-14 h-14 md:w-20 md:h-20 mx-auto mb-3 md:mb-6 rounded-full glass-panel flex items-center justify-center shadow-[0_0_30px_rgba(255,255,255,0.8)]">
+                            <svg class="w-5 h-5 md:w-8 md:h-8 text-pink-500 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 19v-8.93a2 2 0 01.89-1.664l7-4.666a2 2 0 012.22 0l7 4.666A2 2 0 0121 10.07V19M3 19a2 2 0 002 2h14a2 2 0 002-2M3 19l6.75-4.5M21 19l-6.75-4.5M3 10l6.75 4.5M21 10l-6.75 4.5m0 0l-1.14.76a2 2 0 01-2.22 0l-1.14-.76"></path></svg>
                         </div>
-                        <p class="font-playfair font-bold text-xl md:text-2xl text-blue-900">Tap to Reveal</p>
+                        <p class="font-playfair font-bold text-lg md:text-2xl text-blue-900">Tap to Reveal</p>
                     </div>
                     <div class="absolute top-0 left-0 w-[200%] h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -rotate-45 translate-x-[-150%] group-hover:animate-shimmer"></div>
                 </div>
 
-                <div class="card-face card-back absolute inset-0 rounded-3xl glass-panel flex flex-col items-center justify-center p-6 md:p-8">
+                <div class="card-face card-back absolute inset-0 rounded-3xl glass-panel flex flex-col items-center justify-center p-5 md:p-8">
                     <div class="text-center w-full">
-                        <p class="font-playfair italic font-bold text-2xl md:text-4xl text-blue-900 mb-4 md:mb-6 drop-shadow-md">Dearest Rutu,</p>
-                        <p class="text-[10px] md:text-sm tracking-widest uppercase text-gray-800 mb-6 md:mb-10 font-bold leading-relaxed md:leading-loose">A story written in the stars, waiting to be unfolded.</p>
+                        <p class="font-playfair italic font-bold text-2xl md:text-4xl text-blue-900 mb-3 md:mb-6 drop-shadow-md">Dearest Rutu,</p>
+                        <p class="text-[10px] md:text-sm tracking-widest uppercase text-gray-800 mb-5 md:mb-10 font-bold leading-relaxed md:leading-loose">A story written in the stars, waiting to be unfolded.</p>
                         <button class="w-full bg-gradient-to-r from-pink-500 to-blue-500 hover:scale-105 text-white font-bold tracking-widest text-xs md:text-sm uppercase py-3 md:py-4 rounded-xl transition-transform duration-300 shadow-[0_0_20px_rgba(236,72,153,0.5)]" onclick="enterMainSite(event)">
                             Enter Experience
                         </button>
@@ -91,82 +91,78 @@
 
     <!-- STEP 2: The Main Cinematic Scroll (Hidden Initially) -->
     <div id="main-content" class="hidden opacity-0 transition-opacity duration-[1500ms] relative z-10">
-        
-
 
         <canvas id="sakura-canvas" class="fixed inset-0 pointer-events-none z-[-1]"></canvas>
 
         <!-- Hero Section -->
-        <header id="hero" class="min-h-screen relative flex flex-col items-center justify-center text-center px-4 md:px-6 pt-20">
-            <div data-aos="zoom-in-up" data-aos-duration="1500" class="relative z-10 w-full max-w-5xl mx-auto glass-panel p-6 md:p-24 rounded-3xl mt-12">
-                <h1 class="text-4xl md:text-8xl lg:text-9xl font-playfair text-white text-glow mb-8 leading-tight font-bold">
+        <header id="hero" class="min-h-screen relative flex flex-col items-center justify-center text-center px-4 md:px-6 pt-16 md:pt-20">
+            <div data-aos="zoom-in-up" data-aos-duration="1500" class="relative z-10 w-full max-w-5xl mx-auto glass-panel p-6 md:p-24 rounded-3xl mt-8 md:mt-12">
+                <h1 class="text-3xl md:text-7xl lg:text-9xl font-playfair text-white text-glow mb-4 md:mb-8 leading-tight font-bold">
                     Happy Birthday,<br>
                     <span class="italic text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-pink-600 drop-shadow-lg">Rutu</span>
                 </h1>
-                
-
             </div>
             
-            <div class="absolute bottom-12 animate-bounce cursor-pointer text-gray-800 font-bold hover:text-white transition-colors duration-300" onclick="document.getElementById('spotlight').scrollIntoView({behavior:'smooth'})">
-                <span class="text-sm tracking-widest uppercase block mb-2">Discover</span>
-                <svg class="w-8 h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+            <div class="absolute bottom-8 md:bottom-12 animate-bounce cursor-pointer text-gray-800 font-bold hover:text-white transition-colors duration-300" onclick="document.getElementById('spotlight').scrollIntoView({behavior:'smooth'})">
+                <span class="text-xs md:text-sm tracking-widest uppercase block mb-2">Discover</span>
+                <svg class="w-6 h-6 md:w-8 md:h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
             </div>
         </header>
 
-        <main class="container mx-auto px-6 md:px-12 relative z-10">
+        <main class="container mx-auto px-4 md:px-12 relative z-10">
 
             <!-- The Spotlight (Her Profile) -->
-            <section id="spotlight" class="min-h-[90vh] flex flex-col md:flex-row items-center justify-center py-20 gap-6 md:gap-16">
+            <section id="spotlight" class="min-h-[80vh] md:min-h-[90vh] flex flex-col md:flex-row items-center justify-center py-12 md:py-20 gap-6 md:gap-16">
                 <div class="w-full md:w-1/2 flex justify-center" data-aos="fade-right" data-aos-duration="1500">
-                    <div class="relative w-72 h-72 md:w-[400px] md:h-[400px] rounded-full p-3 bg-gradient-to-tr from-blue-400 via-pink-400 to-yellow-400 shadow-[0_0_60px_rgba(255,105,180,0.6)] group hover:scale-105 transition-transform duration-700">
-                        <div class="w-full h-full rounded-full overflow-hidden border-8 border-white">
+                    <div class="relative w-64 h-64 md:w-[400px] md:h-[400px] rounded-full p-2 md:p-3 bg-gradient-to-tr from-blue-400 via-pink-400 to-yellow-400 shadow-[0_0_40px_rgba(255,105,180,0.5)] md:shadow-[0_0_60px_rgba(255,105,180,0.6)] group hover:scale-105 transition-transform duration-700">
+                        <div class="w-full h-full rounded-full overflow-hidden border-4 md:border-8 border-white">
                             <img src="rutu_edited.jpg" alt="Rutu" class="w-full h-full object-cover">
                         </div>
                     </div>
                 </div>
-                <div class="w-full md:w-1/2 text-center md:text-left glass-panel p-6 md:p-10 rounded-3xl relative" data-aos="fade-left" data-aos-duration="1500">
+                <div class="w-full md:w-1/2 text-center md:text-left glass-panel p-5 md:p-10 rounded-2xl md:rounded-3xl relative" data-aos="fade-left" data-aos-duration="1500">
                     
                     <!-- Floating Cute Snoopy -->
-                    <div class="flex justify-center md:absolute md:-top-20 md:-right-10 w-full md:w-auto mb-4 md:mb-0 z-20">
-                        <img src="snoopy1.png" alt="Snoopy" class="w-20 h-20 md:w-40 md:h-40 drop-shadow-xl transform rotate-6 hover:scale-110 transition-transform object-contain">
+                    <div class="flex justify-center md:absolute md:-top-20 md:-right-10 w-full md:w-auto mb-3 md:mb-0 z-20">
+                        <img src="snoopy1.png" alt="Snoopy" class="w-16 h-16 md:w-40 md:h-40 drop-shadow-xl transform rotate-6 hover:scale-110 transition-transform object-contain">
                     </div>
                     
-                    <h2 class="text-sm font-bold tracking-[0.3em] uppercase text-pink-600 mb-4">The Birthday Girl</h2>
-                    <h3 class="text-3xl md:text-7xl font-playfair font-bold mb-6 text-gray-900">To the girl who holds my heart</h3>
-                    <p class="text-gray-800 text-base md:text-xl font-medium leading-loose mb-6">
+                    <h2 class="text-xs md:text-sm font-bold tracking-[0.2em] md:tracking-[0.3em] uppercase text-pink-600 mb-3 md:mb-4">The Birthday Girl</h2>
+                    <h3 class="text-2xl md:text-6xl lg:text-7xl font-playfair font-bold mb-4 md:mb-6 text-gray-900 leading-snug">To the girl who holds my heart</h3>
+                    <p class="text-sm md:text-xl text-gray-800 font-medium leading-relaxed md:leading-loose mb-4 md:mb-6">
                         Every time I look at this picture, I am reminded of how incredibly lucky I am. You have this beautiful way of lighting up every room you walk into.
                     </p>
-                    <p class="text-gray-800 text-base md:text-xl font-medium leading-loose">
+                    <p class="text-sm md:text-xl text-gray-800 font-medium leading-relaxed md:leading-loose">
                         Your smile is my favorite view, and your happiness is my biggest priority. Here is to the most stunning person, inside and out.
                     </p>
                 </div>
             </section>
             
-            <!-- NEW MOTIVATIONAL SECTION: Fix Your Crown -->
-            <section class="py-20 relative" data-aos="zoom-in" data-aos-duration="1500">
-                <div class="flex justify-center md:absolute md:top-10 md:left-10 mb-4 md:mb-0 w-full md:w-auto z-20">
-                    <img src="snoopy3.png" alt="Snoopy" class="w-20 h-20 md:w-32 md:h-32 drop-shadow-xl transform -rotate-12 hover:scale-110 transition-transform object-contain">
+            <!-- Motivational Section: Fix Your Crown -->
+            <section class="py-12 md:py-20 relative" data-aos="zoom-in" data-aos-duration="1500">
+                <div class="flex justify-center md:absolute md:top-10 md:left-10 mb-3 md:mb-0 w-full md:w-auto z-20">
+                    <img src="snoopy3.png" alt="Snoopy" class="w-16 h-16 md:w-32 md:h-32 drop-shadow-xl transform -rotate-12 hover:scale-110 transition-transform object-contain">
                 </div>
-                <div class="max-w-4xl mx-auto glass-panel p-6 md:p-20 rounded-[2rem] md:rounded-[3rem] text-center relative overflow-hidden border-2 border-yellow-300 shadow-[0_0_40px_rgba(253,224,71,0.5)] group">
+                <div class="max-w-4xl mx-auto glass-panel p-5 md:p-20 rounded-2xl md:rounded-[3rem] text-center relative overflow-hidden border-2 border-yellow-300 shadow-[0_0_30px_rgba(253,224,71,0.4)] md:shadow-[0_0_40px_rgba(253,224,71,0.5)] group">
                     <div class="absolute inset-0 bg-gradient-to-br from-yellow-300/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
                     
                     <!-- Crown Icon -->
-                    <div class="w-16 h-16 md:w-24 md:h-24 mx-auto mb-6 md:mb-8 animate-bounce">
+                    <div class="w-12 h-12 md:w-24 md:h-24 mx-auto mb-4 md:mb-8 animate-bounce">
                         <svg class="w-full h-full text-yellow-500 drop-shadow-[0_0_15px_rgba(250,204,21,0.8)]" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M2 22h20v-2H2v2zm20-14.5l-4.5 4.5L12 3 6.5 12 2 7.5V18h20V7.5z"/>
                         </svg>
                     </div>
                     
-                    <h3 class="text-2xl md:text-6xl font-playfair font-bold text-gray-900 mb-8 relative z-10">Conquer It, My Highness</h3>
+                    <h3 class="text-xl md:text-5xl lg:text-6xl font-playfair font-bold text-gray-900 mb-4 md:mb-8 relative z-10 leading-snug">Conquer It, My Highness</h3>
                     
-                    <div class="text-base md:text-3xl font-playfair font-bold leading-relaxed text-gray-800 space-y-6 relative z-10 italic">
+                    <div class="text-sm md:text-2xl lg:text-3xl font-playfair font-bold leading-relaxed text-gray-800 space-y-4 md:space-y-6 relative z-10 italic">
                         <p>
                             "I want you to always remember your golden rule. Whenever things get overwhelming, just pause, fix your crown, and conquer it. That strength isn't just resting on your head; it is entirely within you."
                         </p>
                         <p>
                             "And whatever battles you face—even if you have to fight off a whole army of evil Pikachus—I will always be your loyal knight, making sure that crown stays exactly where it belongs: held high."
                         </p>
-                        <p class="text-pink-600 font-bold text-lg md:text-2xl mt-8">
+                        <p class="text-pink-600 font-bold text-base md:text-xl lg:text-2xl mt-4 md:mt-8">
                             Aur haan, knight ki duty nibhaate nibhaate, kisi din King bhi ban jaunga ❤️😝🥰
                         </p>
                     </div>
@@ -175,16 +171,16 @@
 
 
             <!-- Letter Section -->
-            <section id="letter" class="min-h-[80vh] flex items-center py-20 max-w-5xl mx-auto" data-aos="zoom-in" data-aos-duration="1500">
-                <div class="relative w-full text-center glass-panel p-6 md:p-24 rounded-[2rem] md:rounded-[3rem]">
+            <section id="letter" class="min-h-[70vh] md:min-h-[80vh] flex items-center py-12 md:py-20 max-w-5xl mx-auto" data-aos="zoom-in" data-aos-duration="1500">
+                <div class="relative w-full text-center glass-panel p-5 md:p-20 lg:p-24 rounded-2xl md:rounded-[3rem]">
                     
                     <!-- Cute Snoopy -->
-                    <img src="snoopy2.png" alt="Snoopy" class="w-24 h-24 md:w-32 md:h-32 mx-auto mb-4 drop-shadow-lg object-contain">
+                    <img src="snoopy2.png" alt="Snoopy" class="w-16 h-16 md:w-32 md:h-32 mx-auto mb-3 md:mb-4 drop-shadow-lg object-contain">
                     
-                    <h2 class="text-sm font-bold tracking-[0.3em] uppercase text-blue-600 mb-10 md:mb-12">A Note From Me</h2>
+                    <h2 class="text-xs md:text-sm font-bold tracking-[0.2em] md:tracking-[0.3em] uppercase text-blue-600 mb-6 md:mb-12">A Note From Me</h2>
                     
-                    <div class="text-lg md:text-4xl font-playfair font-bold leading-relaxed text-gray-800 space-y-8 md:space-y-10 relative z-10 text-left md:text-center px-2 md:px-0">
-                        <p class="text-pink-600 text-xl md:text-5xl">Happy Birthday, My Highness 👑🙇🏻</p>
+                    <div class="text-sm md:text-3xl lg:text-4xl font-playfair font-bold leading-relaxed text-gray-800 space-y-5 md:space-y-10 relative z-10 text-left md:text-center px-1 md:px-0">
+                        <p class="text-pink-600 text-lg md:text-4xl lg:text-5xl">Happy Birthday, My Highness 👑🙇🏻</p>
                         
                         <p>
                             My pretty girl is shining even brighter! 🤍 This past year has been absolutely beautiful. We navigated so much together, held each other up, and came to understand each other on a whole new level. And best of all... we finally confessed what was really in our hearts.
@@ -207,16 +203,15 @@
                         </p>
                     </div>
                     
-                    <div class="mt-12 md:mt-16 pt-8 border-t-2 border-pink-300">
-                        <p class="text-xs md:text-sm font-bold tracking-widest uppercase text-gray-600 mb-4">Yours truly,</p>
-                        <p class="text-3xl md:text-4xl font-playfair italic font-bold text-pink-600">Ari</p>
+                    <div class="mt-8 md:mt-16 pt-6 md:pt-8 border-t-2 border-pink-300">
+                        <p class="text-[10px] md:text-sm font-bold tracking-widest uppercase text-gray-600 mb-3 md:mb-4">Yours truly,</p>
+                        <p class="text-2xl md:text-4xl font-playfair italic font-bold text-pink-600">Ari</p>
                     </div>
                 </div>
             </section>
 
-
-
-            
+            <!-- Bottom spacer so letter doesn't end abruptly -->
+            <div class="h-16 md:h-24"></div>
 
         </main>
     </div>
@@ -225,4 +220,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
